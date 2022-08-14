@@ -1,0 +1,89 @@
+.hero__container{
+  background-color: #E7816B;
+  margin-bottom: 3rem;
+}
+
+
+
+.web__design {
+  background-image: url('../../assets/home/desktop/image-web-design-large.jpg')
+}
+
+.app__design{
+  background-image: url('../../assets/home/desktop/image-app-design.jpg')
+}
+
+.graphic__design {
+  background-image: url('../../assets/home/desktop/image-graphic-design.jpg');
+}
+
+.main__container{
+  padding: 0  10px;
+}
+
+.web__design, .app__design, .graphic__design{
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.web__design, .app__design, .graphic__design{
+  margin-bottom: 20px;
+  height: 12rem;
+}
+
+.passion, .resource, .friendly {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.img {
+  height: 6rem !important;
+  width: 6rem !important;
+}
+
+.description {
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 600px){
+  .description{
+    display: flex;
+    gap: 2rem;
+    font-size: 13px;
+  }
+
+  .passion, .resource, .friendly{
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .pages__tags {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem
+  }
+  .web__design{
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    height: 100%;
+    background-color: #E7816B;
+  }
+  .app__design, .graphic__design{
+    height: 15rem;
+  }
+  .web__design, .app__design, .graphic__design{
+    margin: 0;
+  }
+}
+

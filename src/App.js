@@ -1,58 +1,37 @@
 import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
 import './App.css';
+import Footer from './components/Footer/Footer';
+import Header from './components/Header/Header'
+import Main from './components/Main/Main';
+import {Link , Routes, Route} from 'react-router-dom'
+import WebDesign from './components/WebDesign/WebDesign'
+import AppDesign from './components/AppDesign/AppDesign'
+import GraphicDesign from './components/GraphicDesign/GraphicDesign'
+import About from './components/About/About'
+import Contact from './components/Contact/Contact'
+import Location from './components/Location/Location'
+
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
-    </div>
-  );
+		<div className="App">
+			<Header />
+			<div className="app__body">
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/web-design" element={<WebDesign />} />
+          <Route path='/app-design' element={<AppDesign />} />
+          <Route path='/graphic-design' element={<GraphicDesign />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/location' element={<Location />} />
+          <Route path='/contact-us' element={<Contact />} />
+        </Routes>
+			</div>
+			<Footer />
+		</div>
+	);
 }
 
 export default App;
