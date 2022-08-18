@@ -1,42 +1,48 @@
 import { Card, CardContent, CardMedia, Typography } from '@mui/material';
 import React from 'react'
+import './CardItem.css'
+import styled from 'styled-components'
 
 function CardItem({ imgUrl, tag, text }) {
 
-	const styles ={
-		backgroundImage: `url(${imgUrl})`
-	}
-
-	// {/* <div styles={{backgroundImage: `url(${imgUrl}`}}
-
-	// 		></div>
-	// 		<img src={imgUrl} alt="" />
-	// 		
-	// 		 */}
-
 	return (
-		<div className="card__item" style={{ marginBottom: '0.4rem' }}>
-			<Card style={{ borderRadius: '10px', marginBottom: '2rem'}}>
-				<CardMedia
-					component="img"
-					height="250"
-					image={imgUrl}
-					alt="Paella dish"
-					style={{
-						objectFit: 'cover',
-						backgroundSize: 'cover',
-						backgroundPosition: 'center',
-					}}
+		<>
+			<CardContainer class="card">
+				<img
+					class="card-img"
+					src={imgUrl}
+					alt="an iphone on a macbook with dramatic lighting"
 				/>
-				<CardContent style={{ backgroundColor: '#E7816B' }}>
-					<Typography style={{ textAlign: 'center', color: '#333136' }}>
-						<h2 className="tag__title">{tag}</h2>
-						<p className="text">{text}</p>
-					</Typography>
-				</CardContent>
-			</Card>
-		</div>
+				<div class="card-content">
+					<h2 class="card-title">{tag}</h2>
+					<p class="card-body">{text}</p>
+				</div>
+			</CardContainer>
+		</>
 	);
 }
+
+const CardContainer = styled.div`
+	display: flex;
+	flex-direction: column;
+	background-color: #ffad9b;
+	border-radius: 10px;
+	overflow: hidden;
+
+	img {
+		width: 100%;
+		object-fit: cover;
+	}
+
+	div {
+		text-align: center;
+		padding: 15px;
+		background-color: #ffad9b;
+
+		&:hover {
+			background-color: #e7816b;
+		}
+	}
+`;
 
 export default CardItem

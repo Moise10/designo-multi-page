@@ -19,17 +19,16 @@ function App() {
 		<div className="App">
 			<Header />
 			<div className="app__body">
-        <Routes>
-          <Route path="/" element={<Main />} />
-          <Route path="/web-design" element={<WebDesign />} />
-          <Route path='/app-design' element={<AppDesign />} />
-          <Route path='/graphic-design' element={<GraphicDesign />} />
-          <Route path='/about' element={<About />} />
-          <Route path='/location' element={<Location />} />
-          <Route path='/contact-us' element={<Contact />} />
-        </Routes>
+				<Routes>
+					<Route path="/" element={<Main />} />
+					<Route path="/web-design" element={<WebDesign />} />
+					<Route path="/app-design" element={<AppDesign />} />
+					<Route path="/graphic-design" element={<GraphicDesign />} />
+					<Route path="/about" element={<About />} />
+					<Route path="/location" element={<Location />} />
+					<Route path="/contact-us" element={<Contact />} />
+				</Routes>
 			</div>
-			<Footer />
 		</div>
 	);
 }
